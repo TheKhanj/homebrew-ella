@@ -14,6 +14,16 @@ class Ella < Formula
     end
   end
 
+  on_linux do
+    if Hardware::CPU.arm?
+      url "https://github.com/thekhanj/ella/releases/download/v#{version}/ella_v#{version}_linux_arm64.tar.gz"
+      sha256 "e6e1649f60989606fbc0b50e48f1ba673ed72aef39688279a324713aeb6b6000"
+    else
+      url "https://github.com/thekhanj/ella/releases/download/v#{version}/ella_v#{version}_linux_amd64.tar.gz"
+      sha256 "1e32d7224aa1d2d924b42b5f319392ea2dffffe4dd83a9ec7ec86596cc43c1c2"
+    end
+  end
+
   def install
     bin.install "ella"
     doc.install "fsm/service.png"
