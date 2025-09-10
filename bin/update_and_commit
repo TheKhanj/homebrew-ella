@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+template="ella_template.rb"
+out="Formula/ella.rb"
+
+./bin/update "$template" >"$out" || exit 1
+git add "$out" && {
+	version="$(
+		cat "$out" |
+			grep -oE "version \"([^\"]*)\""
+	)"
+	git commit -m "bot: update to version $version"
+}
