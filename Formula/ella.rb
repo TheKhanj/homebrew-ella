@@ -1,26 +1,26 @@
 class Ella < Formula
   desc "A process manager for running and managing services"
   homepage "https://github.com/thekhanj/ella"
-  version "0.0.7"
+  version "0.0.9"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/thekhanj/ella/releases/download/v#{version}/ella_v#{version}_darwin_arm64.tar.gz"
-      sha256 "d9cd899dd3f50a9905153cab54bd3e579bfc8fa9ecdb2258c0cdbb885c9fbcf0"
+      sha256 "18adf333c5c7e4f9f26b23c68386dc8cb48825714cfb594133cdfc2d4758129f"
     else
       url "https://github.com/thekhanj/ella/releases/download/v#{version}/ella_v#{version}_darwin_amd64.tar.gz"
-      sha256 "8745003e139676ebfb14c936130df708ddd72d53eda7d64338433fecffbe586d"
+      sha256 "96c83f17ff17a9a0ec18522277924b485f8e23fa2befb67ce12c66164277e09a"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/thekhanj/ella/releases/download/v#{version}/ella_v#{version}_linux_arm64.tar.gz"
-      sha256 "d72cdd80e51d17a7e73e036336fb09ff42ab98ee6a6a4d87e0642f92cf30e6ea"
+      sha256 "bade9193e6578b822eb3d3fa4692c5aa082f8e04bb152af91308d9db0e45e916"
     else
       url "https://github.com/thekhanj/ella/releases/download/v#{version}/ella_v#{version}_linux_amd64.tar.gz"
-      sha256 "e0b50898c8dc57cadcfae6f09355e3895ea9f6c66a1129833c1a44b5802d7744"
+      sha256 "335cbae035b2a53ff5d63c624ba0e51193efdd584f4e24aa9e41f731669236b3"
     end
   end
 
